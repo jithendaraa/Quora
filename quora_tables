@@ -1,0 +1,43 @@
+
+CREATE DATABASE quora;
+
+
+CREATE TABLE userlogin(
+    username VARCHAR(40) NOT NULL UNIQUE,
+	email VARCHAR(50) NOT NULL UNIQUE,
+	password VARCHAR(250) NOT NULL
+);
+
+
+CREATE TABLE questions(
+    question_by VARCHAR(40) NOT NULL,
+    question VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE response(
+    response VARCHAR(300) NOT NULL,
+    response_to_question VARCHAR(200) NOT NULL,
+    response_to_user VARCHAR(40) NOT NULL,
+    response_by VARCHAR(40) NOT NULL
+
+);
+
+CREATE TABLE comments(
+    comment VARCHAR(200) NOT NULL,
+    comment_to_response VARCHAR(200) NOT NULL,
+    comment_to_user VARCHAR(40) NOT NULL,
+    comment_by VARCHAR(40) NOT NULL
+  
+);
+
+CREATE TABLE likes(
+    question_by VARCHAR(40) ,
+    question VARCHAR(200) ,
+    response_by VARCHAR(40) ,
+    response VARCHAR(500) ,
+    comment_by VARCHAR(40) ,
+    comment VARCHAR(250) ,
+    liked_by VARCHAR(40) NOT NULL
+    
+
+);
